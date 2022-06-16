@@ -1,3 +1,4 @@
+import Button from './components/button';
 import Header from './components/header';
 
 function App() {
