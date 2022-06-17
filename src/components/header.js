@@ -4,7 +4,7 @@ import calIcon from '../assets/img/ta-calendar-icon.svg';
 
 const Header = () => {
   return (
-    <div className="px-5 md:px-28 py-5 flex justify-between items-center">
+    <div className="px-5 md:px-28 py-2 md:py-5 flex justify-between items-center">
       <img src={logo} alt="" />
       <div className="flex items-center">
         <img height="90px" src={calIcon} alt="" className="mr-2" />

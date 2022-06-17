@@ -9,6 +9,7 @@ import lightshow from './assets/img/ta-lightshow.svg';
 
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
+import HeroText from './components/hero-text';
 
 function App() {
   const leftImageRef = useRef();
@@ -55,7 +56,7 @@ function App() {
       .add(slideUpRightTimeline.current, 0.2);
   }, []);
   return (
-    <div className="h-screen bg-[#171954] bg-home text-white">
+    <div className="h-screen bg-[#171954] bg-home text-white absolute w-screen">
       <Header></Header>
 
       {/* Spinning Lights */}
@@ -71,35 +72,15 @@ function App() {
       {/* Content */}
       <div className="text-center mt-4 md:mt-0">
         <div className="px-4 md:px-0">
-          <div className="overflow-hidden">
-            <h2 className="text-3xl md:text-7xl animate-[slideInx2_1s_ease-in-out_1s_both]">
-              Unlock to
-            </h2>
-          </div>
-          <div className="overflow-hidden">
-            <h2 className="text-3xl md:text-7xl font-bold animate-[slideInx2_1s_ease-in-out_1.1s_both]">
-              Power your dreams!
-            </h2>
-          </div>
-          <div className="overflow-hidden">
-            <p className="md:text-2xl mt-6 font-light animate-[slideInx2_1s_ease-in-out_1.2s_both]">
-              Stand a chance to win{' '}
-            </p>
-          </div>
-          <div className="overflow-hidden">
-            <p className="md:text-2xl font-light animate-[slideInx2_1s_ease-in-out_1.3s_both]">
-              <span className="font-extrabold"> N3,000,000</span> everyday for
-              the next 5 days
-            </p>
-          </div>
+          <HeroText></HeroText>
           <InfoBox></InfoBox>
           <Button></Button>
         </div>
 
-        {/* Desktop Images */}
-        <div className="hidden md:block">
+        {/* Images */}
+        <div className="">
           <img
-            className="img-coins bottom-0 animate-[slideInImage_1s_ease-in-out_0.4s_both]"
+            className="img-coins animate-[slideInImage_1s_ease-in-out_0.4s_both]"
             src={coins}
             alt=""
           />
