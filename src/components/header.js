@@ -1,6 +1,4 @@
 import React from 'react';
-// import logo from '../assets/img/ta-logo.svg';
-// import calIcon from '../assets/img/ta-calendar-icon.svg';
 
 const Header = () => {
   return (

@@ -1,11 +1,11 @@
 import Button from './components/button';
 import Header from './components/header';
 import InfoBox from './components/info-box';
-import coins from './assets/img/ta-coins.svg';
-import left from './assets/img/ta-coin-left.svg';
-import right from './assets/img/ta-coin-right.svg';
-import stars from './assets/img/ta-stars.svg';
-import lightshow from './assets/img/ta-lightshow.svg';
+// import coins from './assets/img/ta-coins.svg';
+// import left from './assets/img/ta-coin-left.svg';
+// import right from './assets/img/ta-coin-right.svg';
+// import stars from './assets/img/ta-stars.svg';
+// import lightshow from './assets/img/ta-lightshow.svg';
 
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
@@ -63,12 +63,12 @@ function App() {
       <div className="lightshow">
         <img
           className="img-lightshow animate-[rotate_80s_infinite_linear]"
-          src={lightshow}
+          src="/assets/ta-lightshow.svg"
           alt=""
         />
       </div>
       {/* Stars */}
-      <img className="img-stars" src={stars} alt="" />
+      <img className="img-stars" src="/assets/ta-stars.svg" alt="" />
       {/* Content */}
       <div className="text-center mt-4 md:mt-0">
         <div className="px-4 md:px-0">
@@ -81,13 +81,18 @@ function App() {
         <div className="">
           <img
             className="img-coins animate-[slideInImage_1s_ease-in-out_0.4s_both]"
-            src={coins}
+            src="/assets/ta-coins.svg"
             alt=""
           />
-          <img className="img-coin-left" src={left} alt="" ref={leftImageRef} />
+          <img
+            className="img-coin-left"
+            src="/assets/ta-coin-left.svg"
+            alt=""
+            ref={leftImageRef}
+          />
           <img
             className="img-coin-right"
-            src={right}
+            src="/assets/ta-coin-right.svg"
             alt=""
             ref={rightImageRef}
           />
