@@ -1,11 +1,12 @@
 import Button from './components/button';
 import Header from './components/header';
 import InfoBox from './components/info-box';
-// import coins from './assets/img/ta-coins.svg';
-// import left from './assets/img/ta-coin-left.svg';
-// import right from './assets/img/ta-coin-right.svg';
-// import stars from './assets/img/ta-stars.svg';
-// import lightshow from './assets/img/ta-lightshow.svg';
+import coins from './assets/img/ta-coins.svg';
+import left from './assets/img/ta-coin-left.svg';
+import right from './assets/img/ta-coin-right.svg';
+import stars from './assets/img/ta-stars.svg';
+import lightshow from './assets/img/ta-lightshow.svg';
+import blinkingStars from './assets/img/ta-blinking-stars.svg';
 
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
@@ -59,16 +60,17 @@ function App() {
     <div className="h-screen bg-[#171954] bg-home text-white absolute w-screen">
       <Header></Header>
 
-      {/* Spinning Lights */}
+      {/* Spinning Lights and blinking stars */}
       <div className="lightshow">
         <img
           className="img-lightshow animate-[rotate_80s_infinite_linear]"
-          src="/assets/ta-lightshow.svg"
+          src={lightshow}
           alt=""
         />
       </div>
+      <img className="img-blinking" src={blinkingStars} alt="" />
       {/* Stars */}
-      <img className="img-stars" src="/assets/ta-stars.svg" alt="" />
+      <img className="img-stars" src={stars} alt="" />
       {/* Content */}
       <div className="text-center mt-4 md:mt-0">
         <div className="px-4 md:px-0">
@@ -81,18 +83,13 @@ function App() {
         <div className="">
           <img
             className="img-coins animate-[slideInImage_1s_ease-in-out_0.4s_both]"
-            src="/assets/ta-coins.svg"
+            src={coins}
             alt=""
           />
-          <img
-            className="img-coin-left"
-            src="/assets/ta-coin-left.svg"
-            alt=""
-            ref={leftImageRef}
-          />
+          <img className="img-coin-left" src={left} alt="" ref={leftImageRef} />
           <img
             className="img-coin-right"
-            src="/assets/ta-coin-right.svg"
+            src={right}
             alt=""
             ref={rightImageRef}
           />
